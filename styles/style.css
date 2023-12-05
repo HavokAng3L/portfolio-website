@@ -50,6 +50,10 @@ img {
   height: 100px;
 }
 
+p {
+  font-size: 1.2rem;
+}
+
 
 /* Main Styling */
 body {
@@ -97,7 +101,7 @@ body {
   justify-content: center;
 }
 
-.introduction__title {
+.introduction__title, .content-section__title, .about-section__title, .portfolio-section__title{
   font-size: 5rem;
 }
 
@@ -127,17 +131,16 @@ body {
   border: solid #00dfe6 2px;
 }
 
-/* Footer */
-.footer {
-  background-color: #006C70;
-  border-top: solid 2px #00dfe6;
-}
-
-/* Portfolio Page */
-.main-content_portfolio, .main-content_about-section, .main-content_contact-section {
+.main-content_portfolio-section, .main-content_about-section, .main-content_contact-section {
   height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+/* Footer */
+.footer {
+  background-color: #006C70;
+  border-top: solid 2px #00dfe6;
 }
