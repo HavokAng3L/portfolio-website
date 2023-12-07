@@ -143,4 +143,6 @@ body {
 .footer {
   background-color: #006C70;
   border-top: solid 2px #00dfe6;
+  height: 100%;
+  padding: 10px 6px;
 }
