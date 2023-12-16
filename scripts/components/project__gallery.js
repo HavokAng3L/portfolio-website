@@ -44,7 +44,7 @@ fetch(GITHUB_REPOS_URL)
   .then((res) => res.json())
   .then((res) => {
     for (const project of res) {
-      if (project.private !== true) {
+      if (project.stargazers_count > 0) {
         cardGenerator(project.name, project.html_url, project.description);
       }
     }
