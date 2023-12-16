@@ -54,7 +54,6 @@ p {
   font-size: 1.2rem;
 }
 
-
 /* Main Styling */
 body {
   background-image: url("../images/backgrounds/background.jpg");
@@ -101,7 +100,10 @@ body {
   justify-content: center;
 }
 
-.introduction__title, .content-section__title, .about-section__title, .portfolio-section__title{
+.introduction__title,
+.content-section__title,
+.about-section__title,
+.portfolio-section__title {
   font-size: 5rem;
 }
 
@@ -109,7 +111,8 @@ body {
   font-size: 1.2rem;
 }
 
-.tech-section__gallery, .language-section__gallery {
+.tech-section__gallery,
+.language-section__gallery {
   background-color: #00dee640;
   overflow-x: scroll;
   white-space: nowrap;
@@ -117,9 +120,16 @@ body {
   border-radius: 1rem;
 }
 
+.project-section__gallery {
+  background-color: #00dee640;
+  overflow-x: scroll;
+  margin: 2rem 0;
+  border-radius: 1rem;
+}
+
 .gallery__card {
   display: inline-block; /*Allows me to set width and height of each card*/
-  background-color: #006C70;
+  background-color: #006c70;
   margin: 1rem;
   padding: 1rem;
   border: solid transparent 2px;
@@ -131,7 +141,9 @@ body {
   border: solid #00dfe6 2px;
 }
 
-.main-content_portfolio-section, .main-content_about-section, .main-content_contact-section {
+.main-content_portfolio-section,
+.main-content_about-section,
+.main-content_contact-section {
   height: 100dvh;
   display: flex;
   flex-direction: column;
@@ -141,14 +153,19 @@ body {
 
 /* Footer */
 .footer {
-  background-color: #006C70;
+  background-color: #006c70;
   border-top: solid 2px #00dfe6;
   height: 100%;
   padding: 10px 6px;
 }
 
-@media screen and (min-width: 810px ) {
-  .tech-section__gallery, .language-section__gallery {
+@media screen and (min-width: 810px) {
+  .project-section__gallery,
+  .tech-section__gallery,
+  .language-section__gallery {
     overflow: hidden;
+  }
+  .gallery__card {
+    max-width: 200px;
   }
 }
