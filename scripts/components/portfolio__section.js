@@ -1,7 +1,7 @@
 const GITHUB_REPOS_URL = "https://api.github.com/users/HavokAng3L/repos";
-const projectGallery = document.getElementById("project-section__gallery");
+const projectContainer = document.getElementById("portfolio-section__container");
 
-class Card {
+class ProjectCard {
   constructor(name, url, description) {
     this.name = name;
     this.url = url;
@@ -9,7 +9,7 @@ class Card {
   }
 
   createCard() {
-    // Initializing the card
+    // Initializing the card root element
     const card = document.createElement("div");
 
     // Initializing the recipe for the card (What each card MUST contain for this section)
@@ -21,6 +21,8 @@ class Card {
     card.setAttribute("class", "gallery__card");
     cardUrl.setAttribute("href", `${this.url}`);
     cardUrl.setAttribute("target", "_blank");
+
+    // Applying attributes to the preview
 
     // setting the text content within the important pieces
     cardTitle.textContent = this.name;
@@ -36,8 +38,8 @@ class Card {
 }
 
 function cardGenerator(name, url, desc) {
-  const card = new Card(name, url, desc);
-  projectGallery.appendChild(card.createCard());
+  const card = new ProjectCard(name, url, desc);
+  projectContainer.appendChild(card.createCard());
 }
 
 fetch(GITHUB_REPOS_URL)
